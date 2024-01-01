@@ -10,6 +10,7 @@ CLS
     ) ELSE (
         ECHO Faut lancer le script en tant que administrateur
 	PAUSE
+	EXIT /B
     )
 
 :seturl
@@ -21,4 +22,4 @@ ECHO.
 
 choice /C:YN /M:"Continuer? "
 IF ERRORLEVEL ==1 GOTO seturl
-IF ERRORLEVEL ==2 EXIT
+IF ERRORLEVEL ==2 EXIT /B
